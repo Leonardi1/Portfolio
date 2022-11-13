@@ -1,0 +1,720 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Albert Sans', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 70px;
+    padding: 20px;
+    margin-left: 30px;
+    font-size: 20px;
+}
+.logo img{
+    width: 70px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.logo img:hover{
+    transform: scale(1.3);
+}
+/* header .logo{
+    margin-left: -100px;
+} */
+
+header .navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+.navbar ul a:hover{
+    color: crimson;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    padding: 5px;
+    position: relative;
+}
+.navbar ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: crimson;
+    position: absolute;
+    left: 25%;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.navbar ul li a:hover::after{
+    width: 50%;
+}
+/* .search{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-self: flex-start;
+    background-color: #fff;
+}
+.search img{
+    
+    
+}
+.search input{
+    padding: 5px;
+    margin-left: 20px;
+    height: 40px;
+    align-self: flex-end;
+    background-color: transparent;
+} */
+
+/*  ---------------------------Perfundon pjesa e headerit-------------------------------*/
+
+.home{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 70px;
+}
+.introduction{
+    /* background-color: aqua; */
+    line-height: 40px;
+}
+.introduction p{
+    font-size: 25px;
+    color: crimson;
+    margin-left: 60px;
+    padding: 10px;
+}
+.introduction h1{
+    font-size: 50px;
+    color:blue;
+    margin-left: 60px;
+    padding: 10px;
+
+}
+.introduction h3{
+    font-size: 20px;
+    color: crimson;
+    margin-left: 60px;
+    padding: 10px;
+
+}
+.socialmedia{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+.socialmedia a{
+    width: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.5s;
+    cursor: pointer;
+    margin-left: 60px;
+}
+.socialmedia a:hover{
+    transform: translateY(-5px);
+    transform: scale(1.2);
+
+}
+.introduction .about-me{
+    width: 250px;
+    height: 50px;
+    margin-left: 60px;
+    margin-top: 70px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: orangered;
+    color:#fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.about-me:hover{
+    color:#000;
+    background-color: green;
+    border: 2px solid #000;
+    transition: ease-in-out 0.3s;
+}
+.about-me a{
+    text-decoration: none;
+    color: #fff;
+}
+.about-me:hover a{
+    color: #000;
+}
+.foto img{
+    width: 300px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+
+/*----------------------------------ABOUT ME--------------------------------------------*/
+#ABOUT{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* width: 100%; */
+    padding: 30px 50px;
+    background-color: beige;
+}
+#ABOUT .foto-about img{
+    margin-top: 100px;
+    border-radius: 10px;
+}
+.about h1{
+    color:crimson;
+    font-size: 35px;
+    text-align: center;
+    padding: 5px 10px 20px 10px;
+    cursor: pointer;
+}
+.about p{
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 18px;
+    line-height: 30px
+
+}
+.attributes-titles {
+    display: flex;
+    justify-content: space-evenly;
+}
+.attribute-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+.attribute-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.attribute-links.active-link::after{
+    width: 50%;
+}
+.attribute-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+.attribute-contents ul li span{
+    color: green;
+    font-size: 14px;
+}
+.attribute-contents{
+    display: none;
+}
+.attribute-contents.active-attribute{
+    display: block;
+}
+/*-----------------------------------------------------------------------------------*/
+#SERVICES{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.sec3-title h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff004f;
+    text-align: center;
+}
+.sec3-works{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.work{
+    width: 300px;
+    background-color: darkgray;
+    border-radius: 10px;
+    height: 350px;
+    cursor: pointer;
+}
+.work:hover{
+    background-color: #ff004f;
+    transition: ease-in-out 0.5s;
+    color: #fff;
+    transform: translateY(-10px);
+    transform: scale(1.1);
+}
+.work img{
+    margin-left: 40%;
+    padding-top: 5px;
+}
+.work h2{
+    font-size: 25px;
+    padding: 10px;
+}
+.work .ul-li{
+    padding: 10px;
+    margin-left: 10px;
+    line-height: 25px;
+}
+
+/*------------------------------------CONTACT-------------------------------------------*/
+
+#CONTACT{
+    background-color: beige;
+    padding-top: 50px;
+    padding-left: 20px;
+
+}
+#CONTACT .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-grid .left-contact h1{
+    font-size: 40px;
+    padding: 20px 10px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.left-grid .left-contact h1:hover{
+    color: crimson;
+}
+.left-grid .icons1{
+    display: flex;
+}
+.left-grid .icons1 img{
+    margin-top: 6px;
+    margin-left: 50px;
+
+}
+.left-grid .left-contact p{
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 20px;
+
+}
+.social-icons{
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 50px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons img{
+    padding: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+.social-icons a:hover{
+    transform: translateY(-5px);
+}
+
+.cv-download .btn-CV-sub{
+    width: 200px;
+    font-size: 20px;
+    padding: 15px;
+    margin-left: 50px;
+    border-radius: 10px;
+    background-color: rgb(255, 84, 5);
+    text-align: center;
+    color: #000;
+}
+.cv-download .btn-CV-sub:hover{
+    background-color: green;
+
+
+}
+.cv-download  a{
+    text-decoration: none;
+}
+
+.btn-CV-sub{
+    display: inline-block;
+    background-color: #ff004f;
+    margin-top: 50px;
+}
+
+.right-grid form{
+    width: 100%;
+
+}
+form input, form textarea{
+    width: 90%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color:#fff;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+form .btn-CV-sub{
+    font-size: 20px;
+    background-color: #262626;
+    color: #fff;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+form .btn-CV-sub:hover{
+    background-color: green;
+    color:#000;
+    transition: ease-in-out 0.2s;
+}
+
+/*------------------------------------FOOTER---------------------------------------------*/
+
+footer p{
+    background-color: #000;
+    height: 60px;
+    color: #fff;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+/*______________________________________________________________________________________*/
+/*______________________________________________________________________________________*/
+/*______________________________________________________________________________________*/
+/*______________________________________________________________________________________*/
+/*______________________________________________________________________________________*/
+
+
+/*Telefon*/
+@media screen and (max-width: 760px){
+
+    body{
+        overflow-x: hidden;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* width: 100%; */
+        height: 150px;
+        
+    }
+    .logo img{
+        width: 70px;
+        margin-left: 44%;
+        
+    }
+    
+    header .navbar ul{
+        justify-content: space-between;
+    }
+    
+    /*  -----------------------------------------------------Perfundon pjesa e headerit-------------------------------*/
+    
+    .home{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+    .introduction{
+        line-height: 50px;
+    }
+    .introduction p{
+        font-size: 20px;
+    }
+    .introduction h1{
+        font-size: 40px;
+    }
+    .socialmedia{
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0px;
+    }
+    .socialmedia a{
+        width: 20px;
+        text-decoration: none;
+        display: block;
+        transition: transform 0.5s;
+        cursor: pointer;
+        margin-left: 70px;
+    }
+    .socialmedia a:hover{
+        transform: translateY(-5px);
+        transform: scale(1.2);
+    
+    }
+    .introduction .about-me{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+    }
+    .about-me:hover{
+        color:#000;
+        background-color: green;
+        border: 2px solid #000;
+        transition: ease-in-out 0.3s;
+    }
+    .about-me a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .about-me:hover a{
+        color: #000;
+    }
+    .home .foto img{
+        border-radius: 50px;
+        cursor: pointer;
+        width: 60%;
+    }
+    
+    
+    
+    /*-----------------------------------------------ABOUT ME---------------------------------------------------------------*/
+    #ABOUT{
+        display: block;
+        padding: 30px 50px;
+        /* background-color: green; */
+        background-color: transparent;
+        margin-top: 100px;
+        /* margin-top: 250px;   amo sbon kshtu*/
+    }
+    .foto-about img{
+        width: 300px;
+    }
+    .about h1{
+        font-size: 50px;
+        margin-left: -50px;
+        margin-top: 20px;
+    }
+    .about p{
+        margin-bottom: 20px;
+        padding: 5px;
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .attributes-titles {
+        flex-direction: column;
+    }
+    .attributes-titles p{
+        font-size: 30px;
+    }
+    /*------------------------------------------------SERVICES---------------------------------------------------------*/
+    #SERVICES{
+        align-items: center;
+    }
+    .sec3-title h2{
+        font-size: 70px;
+        font-weight: bold;
+        color: #ff004f;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .sec3-works{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .work{
+        width: 500px; 
+        height: auto; 
+        padding: 20px;
+        margin-bottom: 10px; 
+    }
+    .work:hover{
+        background-color: #ff004f;
+        transition: ease-in-out 0.5s;
+        color: #fff;
+        transform: translateY(-10px);
+        transform: scale(1.1);
+    }
+    .work img{
+        margin-left: 40%;
+        padding-top: 5px;
+        width: 100px;
+    }
+    .work h2{
+        font-size: 45px;
+        padding: 10px;
+    }
+    .work .ul-li{
+        padding: 10px;
+        margin-left: 10px;
+        line-height: 45px;
+        font-size: 30px;
+    }
+    
+    /*----------------------------------------------CONTACT-----------------------------------------------------------------*/
+    
+    #CONTACT{
+        background-color: transparent;
+        padding-top: 50px;
+        padding-left: 20px;
+    
+    }
+    #CONTACT .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .left-grid .left-contact h1{
+        font-size: 60px;
+        padding: 20px 10px;
+        margin-left: 0px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .left-grid .left-contact h1:hover{
+        color: crimson;
+    }
+    .left-grid .icons1{
+        display: flex;
+    }
+    .left-grid .icons1 img{
+        margin-top: 6px;
+        margin-left: 50px;
+        width: 50px;
+        height: auto;
+    
+    }
+    .left-grid .left-contact p{
+        font-size: 30px;
+        padding: 10px;
+        margin-left: 50px;
+    
+    }
+    .social-icons{
+        display: flex;
+        justify-content: flex-start;
+    
+    }
+    .social-icons a{
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.5s;
+    }
+    .social-icons img{
+        width: 50px;
+        margin-left: 100px;
+    
+    }
+    
+    .social-icons a:hover{
+        transform: translateY(-5px);
+    }
+    
+    .cv-download .btn-CV-sub{
+        width: 40%;
+        height: auto;
+        font-size: 30px;
+        padding: 15px;
+        margin-left: 200px;
+        border-radius: 10px;
+        background-color: rgb(255, 84, 5);
+        color: #000;
+    }
+    .cv-download  a{
+        text-decoration: none;
+    }
+    
+    .btn-CV-sub{
+        display: inline-block;
+        background-color: #ff004f;
+        margin-top: 50px;
+    }
+    
+    .right-grid form{
+        width: 100%;
+    
+    }
+    form input, form textarea{
+        width: 90%;
+        border: 0;
+        outline: none;
+        background-color: #262626;
+        padding: 15px;
+        margin: 30px 50px;
+        color:#fff;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+    
+    form .btn-CV-sub{
+        width: 40%;
+        height: auto;
+        font-size: 30px;
+        padding: 15px;
+        margin-top: -10px;
+        background-color: #262626;
+        color: #fff;
+        margin-left: 30%;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    form .btn-CV-sub:hover{
+        background-color: #86fe4f;
+        color:#000;
+        transition: ease-in-out 0.2s;
+    }
+    
+    /*--------------------------------------------------------FOOTER---------------------------------------------*/
+    footer{
+        width: 100%;
+    }
+    footer .copyright{
+        background-color: #000;
+    }
+
+    footer p{
+        background-color: #000;
+        height: 60px;
+        color: #fff;
+        padding: 20px 0px;
+        text-align: center;
+    }
+    
+}
+
+/*laptop*/
+
+@media screen and (min-width: 1024px){
+
+}
